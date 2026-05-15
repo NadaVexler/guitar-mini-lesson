@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="he" dir="rtl">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>חזור לנגן בגיטרה - שיעור מיני במתנה | נדב וקסלר</title>
+    <meta name="description" content="שיעור גיטרה ממוקד לאנשי הייטק ועסוקים. חזור לנגן תוך 6 דקות.">
+
+    <!-- Google Fonts: Heebo for clean, modern Hebrew -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Heebo:wght@300;400;700;900&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <div class="container">
+
+        <div class="header-span">
+            <span class="subtitle">לאנשי הייטק ואנשים עסוקים</span>
+            <h1>הגיטרה שלך הייתה בקייס יותר מדי זמן, בוא נתקן את זה ב-6 דק'</h1>
+        </div>
+
+        <!-- Copy Section -->
+        <div class="content">
+            <p class="subheadline">שיעור גיטרה ממוקד קצר ולעניין, שיכווין לך את הדרך לחזור לנגן בהנאה</p>
+
+            <div class="features">
+                <div class="feature-item">
+                    <div class="feature-title">אין לך זמן?</div>
+                    <div class="feature-desc">השיעור בנוי ללו"ז צפוף. 6 דקות ואתה מנגן.</div>
+                </div>
+                <div class="feature-item">
+                    <div class="feature-title">חלוד בטירוף?</div>
+                    <div class="feature-desc">אחרי השיעור אתה תרגיש משומן יותר.</div>
+                </div>
+                <div class="feature-item">
+                    <div class="feature-title">צריך הכוונה?</div>
+                    <div class="feature-desc">זה הצעד הראשון שלך לפני שאתה מתחייב לתהליך גדול יותר.</div>
+                </div>
+            </div>
+
+            <div class="guarantee-box">
+                <strong>אחריות מלאה:</strong> אם לא תרגיש 2x ביטחון על הגיטרה אחרי 6 הדקות האלה, אני אתקשר אליך אישית
+                להדריך ולייעץ לך.
+            </div>
+
+            <div class="form-box">
+                <div id="form-success" style="display:none; padding: 40px 20px; text-align: center; background: rgba(255, 255, 255, 0.03); border: 1px solid var(--accent); border-radius: 12px; color: #ffffff; margin-bottom: 20px; animation: fadeIn 0.5s ease-out; backdrop-filter: blur(10px);">
+                    <div style="font-size: 3rem; margin-bottom: 20px;">🎸</div>
+                    <h2 style="margin-bottom: 15px; color: var(--accent); font-size: 2rem;">יש לנו את זה!</h2>
+                    <p style="font-size: 1.2rem; line-height: 1.6; color: var(--text-main);">קיבלתי את הפרטים שלך, וברגע הראשון שאתפנה אני שולח לך את השיעור למייל :)</p>
+                </div>
+                <div id="form-error" data-fs-error style="display:none; padding: 20px; text-align: center; background: rgba(248, 113, 113, 0.1); border: 1px solid #f87171; border-radius: 8px; color: #f87171; margin-bottom: 20px;">
+                    אופס! קרתה שגיאה. אנא נסה שוב מאוחר יותר.
+                </div>
+
+                <form id="contact-form">
+
+                    <div class="form-group">
+                        <label for="name">שם מלא</label>
+                        <input type="text" id="name" name="name" placeholder="ישראל ישראלי" required data-fs-field>
+                        <span data-fs-error="name" style="color: #f87171; font-size: 0.8rem; margin-top: 4px;"></span>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="phone">טלפון</label>
+                        <input type="tel" id="phone" name="phone" placeholder="050-1234567" required data-fs-field>
+                        <span data-fs-error="phone" style="color: #f87171; font-size: 0.8rem; margin-top: 4px;"></span>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="email">אימייל</label>
+                        <input type="email" id="email" name="email" placeholder="name@company.com" required data-fs-field>
+                        <span data-fs-error="email" style="color: #f87171; font-size: 0.8rem; margin-top: 4px;"></span>
+                    </div>
+
+                    <button type="submit" class="cta-button" data-fs-submit-btn>קבל גישה לשיעורון עכשיו!</button>
+
+                    <span class="micro-copy">ללא אשראי. ללא התחייבות לטווח ארוך. נטו שיעור.</span>
+                </form>
+            </div>
+
+            <script>
+                window.formspree = window.formspree || function () { (formspree.q = formspree.q || []).push(arguments); };
+                formspree('initForm', { 
+                    formElement: '#contact-form', 
+                    formId: 'xpqlvbga',
+                    onSuccess: function() {
+                        // Hide form components
+                        document.getElementById('contact-form').style.display = 'none';
+                        const microCopy = document.querySelector('.micro-copy');
+                        if (microCopy) microCopy.style.display = 'none';
+                        
+                        // Show success message
+                        const successMsg = document.getElementById('form-success');
+                        successMsg.style.display = 'block';
+                        
+                        // Ensure it's scrolled into view if needed
+                        successMsg.scrollIntoView({ behavior: 'smooth', block: 'center' });
+                    }
+                });
+            </script>
+            <script src="https://unpkg.com/@formspree/ajax@1" defer></script>
+        </div>
+
+        <!-- Visual Proof Section -->
+        <div class="visual-proof" aria-label="תצוגה מקדימה של השיעור">
+            <!-- Placeholder for Video Thumbnail or PDF Cover -->
+            <img src="assets/laying.jpeg" alt="תצוגה מקדימה" style="width:100%; height:auto; display:block;">
+        </div>
+
+
+
+    </div>
+
+</body>
+
+</html>
